@@ -4,11 +4,11 @@ def main():
         start = input('Enter the starting letter: ')
         end = input('Enter the starting letter: ')
 
-        if not start < end and (start.isalpha() and end.isalpha()):
+        if not (start.isalpha() and end.isalpha() and start < end):
             print("Input Error")
             continue
+        
         result.clear()
-
         for i in range(ord(start), ord(end) + 1):
             result.append(chr(i))
 
