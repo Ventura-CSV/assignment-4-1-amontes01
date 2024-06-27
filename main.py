@@ -4,18 +4,20 @@ def main():
         start = input('Enter the starting letter: ')
         end = input('Enter the starting letter: ')
 
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+        if not start < end and (start.isalpha() and end.isalpha()):
+            print("Input Error")
+            continue
+        result.clear()
 
-    print(*result)
+        for i in range(ord(start), ord(end) + 1):
+            result.append(chr(i))
+
+        print(*result)
 
     ########################################
     # Do not delete the return statement
     ########################################
-    return result
+        return result
 
 
 if __name__ == '__main__':
